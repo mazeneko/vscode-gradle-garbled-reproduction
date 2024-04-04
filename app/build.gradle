@@ -3,6 +3,10 @@ plugins {
 }
 
 tasks {
+    run {
+        jvmArgs "-Dstdout.encoding=UTF-8"
+        jvmArgs "-Dstderr.encoding=UTF-8"
+    }
     compileJava {
         options.encoding = "UTF-8"
     }
@@ -10,7 +14,7 @@ tasks {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
